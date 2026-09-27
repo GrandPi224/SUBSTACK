@@ -1,8 +1,8 @@
-# substack
+# SUBSTACK
 
 Sources, notes and data behind each article by William "Chip" Corley on [chipcorley.substack.com](https://chipcorley.substack.com).
 
-Published at https://grandpi224.github.io/substack/
+Published at https://grandpi224.github.io/SUBSTACK/
 
 - `index.html`: the hub, one entry per article.
 - `sources/<article-slug>/index.html`: sources and notes for one article. Each article links here after its sign-off.
