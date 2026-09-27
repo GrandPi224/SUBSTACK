@@ -73,3 +73,14 @@ summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
   details.article > summary { grid-template-columns: 1fr; gap: 0.2rem; }
   .article-body { padding-left: 0; }
 }
+
+/* Footnotes group under each article title */
+details.group > summary { cursor: pointer; list-style: none; padding: 0.4rem 0; }
+details.group > summary::-webkit-details-marker { display: none; }
+details.group > summary h3 { display: inline; font-size: 1.15rem; margin: 0; }
+details.group > summary h3::before { content: "\25B8"; display: inline-block; width: 1.2em; color: var(--accent); }
+details[open].group > summary h3::before { content: "\25BE"; }
+.group-body { padding-left: 1.2em; }
+details.section > summary h4 { display: inline; font-size: 1.05rem; margin: 0; }
+details.section > summary h4::before { content: "\25B8"; display: inline-block; width: 1.2em; color: var(--accent); }
+details[open].section > summary h4::before { content: "\25BE"; }
