@@ -84,3 +84,13 @@ details[open].group > summary h3::before { content: "\25BE"; }
 details.section > summary h4 { display: inline; font-size: 1.05rem; margin: 0; }
 details.section > summary h4::before { content: "\25B8"; display: inline-block; width: 1.2em; color: var(--accent); }
 details[open].section > summary h4::before { content: "\25BE"; }
+
+/* Bucky's Blokes cast page */
+.cast-link { margin: 1.2rem 0 0.4rem; font-weight: bold; }
+article.bloke { display: grid; grid-template-columns: 14rem 1fr; gap: 1.5rem; align-items: center; padding: 1.5rem 0; border-bottom: 1px solid var(--rule); }
+article.bloke img { width: 100%; height: auto; }
+article.bloke h2 { margin: 0 0 0.2rem; }
+article.bloke .kicker { margin-bottom: 0.6rem; }
+article.bloke .verb { font-style: italic; font-size: 1.15rem; margin: 0 0 0.5rem; }
+article.bloke .role { color: var(--muted); font-size: 0.95rem; }
+@media (max-width: 36rem) { article.bloke { grid-template-columns: 1fr; } article.bloke img { max-width: 16rem; } }
