@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chip Corley on Substack: Sources and Notes</title>
 <meta name="description" content="Sources, notes and data behind each article by William &quot;Chip&quot; Corley on Substack.">
-<link rel="stylesheet" href="assets/site.css?v=2">
+<link rel="stylesheet" href="assets/site.css?v=3">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <header>
   <p class="kicker">William "Chip" Corley</p>
   <h1>Sources and Notes</h1>
-  <p class="lead">The research behind each article on <a href="https://chipcorley.substack.com">chipcorley.substack.com</a>. Select an article to open its sources, then select a heading to open that section.</p>
+  <p class="lead">The research behind each article on <a href="https://chipcorley.substack.com">chipcorley.substack.com</a>. Select an article title to open its headings, then select a heading to open that section.</p>
 </header>
 <main id="main">
   <h2 class="visually-hidden">Articles, newest first</h2>
   <div class="articles">
 
     <details class="article" id="ai-jobocalypse-or-jobtopia">
-      <summary><span class="date">Sep 27, 2026</span><span class="title">AI Jobocalypse or Jobtopia</span></summary>
+      <summary><span class="date">Sep 27, 2026</span> <span class="title">AI Jobocalypse or Jobtopia</span></summary>
       <div class="article-body">
       <details class="section" id="aj-harvard">
         <summary><h3>Harvard Business School</h3></summary>
@@ -87,7 +87,8 @@
     if (!id) return;
     var el = document.getElementById(id);
     if (!el) return;
-    for (var n = el; n; n = n.parentElement) { if (n.tagName === 'DETAILS') n.open = true; }
+    // Open only the ancestors of the target; an article itself stays collapsed under its title.
+    for (var n = el.parentElement; n; n = n.parentElement) { if (n.tagName === 'DETAILS') n.open = true; }
     var s = el.querySelector('summary');
     if (s) { s.focus(); }
     el.scrollIntoView({ block: 'start' });
