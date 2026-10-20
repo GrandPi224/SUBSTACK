@@ -105,3 +105,4 @@ p.traitor { text-align: center; margin-top: 1rem; }
 ul.crew-grid.six, ul.crew-grid { grid-template-columns: repeat(6, 1fr); gap: 0.5rem; margin-top: 0.5rem; }
 ul.crew-grid li { font-size: 0.95rem; line-height: 1.35; }
 @media (max-width: 36rem) { ul.crew-grid { grid-template-columns: repeat(3, 1fr); } }
+ul.crew-grid i { white-space: nowrap; }
