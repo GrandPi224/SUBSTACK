@@ -94,3 +94,10 @@ article.bloke .kicker { margin-bottom: 0.6rem; }
 article.bloke .verb { font-style: italic; font-size: 1.15rem; margin: 0 0 0.5rem; }
 article.bloke .role { color: var(--muted); font-size: 0.95rem; }
 @media (max-width: 36rem) { article.bloke { grid-template-columns: 1fr; } article.bloke img { max-width: 16rem; } }
+section.cabal { padding: 1.5rem 0; border-bottom: 1px solid var(--rule); }
+section.cabal img.crew { width: 100%; height: auto; border-radius: 6px; }
+ul.crew-grid { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+ul.crew-grid li { text-align: center; }
+ul.crew-grid img { width: 100%; height: auto; display: block; }
+ul.crew-grid b { display: block; }
+@media (max-width: 36rem) { ul.crew-grid { grid-template-columns: repeat(2, 1fr); } }
