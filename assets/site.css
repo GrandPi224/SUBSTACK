@@ -107,3 +107,5 @@ ul.crew-grid li { font-size: 0.95rem; line-height: 1.35; }
 @media (max-width: 36rem) { ul.crew-grid { grid-template-columns: repeat(3, 1fr); } }
 ul.crew-grid i { white-space: nowrap; }
 ul.crew-grid.duo { grid-template-columns: repeat(2, 1fr); }
+
+.verse{margin:1em 0 1em 1.5em;padding-left:1em;border-left:3px solid #e2d6c8;line-height:1.7}
