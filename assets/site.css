@@ -110,3 +110,5 @@ ul.crew-grid.duo { grid-template-columns: repeat(2, 1fr); }
 
 .verse{margin:1em 0 1em 1.5em;padding-left:1em;border-left:3px solid #e2d6c8;line-height:1.7}
 ul.crew-grid i strong { margin-right: 1.5px; }
+.cast-nav { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #e2d6c8; }
+.cast-nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
