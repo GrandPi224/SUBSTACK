@@ -154,6 +154,28 @@ def paragraphs(path):
     return [" ".join(p.split("\n")) for p in path.read_text(encoding="utf-8").strip().split("\n\n")]
 
 
+# "[SFX name]" paragraphs in the host scripts play these effects, generated once and cached.
+SFX = {"drumroll": ("Snare drum roll building in a radio studio, ending in a single cymbal crash", 4.0),
+       "cheer": ("Small studio audience cheering and clapping, hip hip hooray, then settling down", 4.0)}
+
+
+def sfx(name, wav):
+    """Effect mixed 6 dB under the voices. False if the key can't make sounds yet."""
+    import build_episode as b
+    mp3 = b.WORK / f"sfx_{name}.mp3"
+    if not mp3.exists():
+        text, secs = SFX[name]
+        r = requests.post(f"{API}/sound-generation", headers=H,
+                          json={"text": text, "duration_seconds": secs, "prompt_influence": 0.6})
+        if r.status_code == 401:
+            print("SFX skipped, key lacks sound_generation:", name)
+            return False
+        r.raise_for_status()
+        mp3.write_bytes(r.content)
+    b.run("-i", mp3, "-ar", "44100", "-ac", "1", "-af", "loudnorm=I=-22:TP=-3:LRA=11", wav)
+    return True
+
+
 def episode():
     """Intro and outro in Chip's clone, one paragraph at a time; then the hosted roundtable."""
     sys.argv = ["x"]
@@ -172,6 +194,11 @@ def episode():
     parts = []
     import hashlib
     for i, (who, text, gap) in enumerate(segs, 1):
+        if text.startswith("[SFX "):
+            wav = b.WORK / f"sfx_{text[5:-1]}.wav"
+            if sfx(text[5:-1], wav):
+                parts += [wav, b.WORK / "e_gap.wav"]
+            continue
         # Keyed by speaker + text: an edited line re-voices, every unchanged line reuses its take.
         mp3 = b.WORK / f"h_{hashlib.md5((who + '|' + text).encode()).hexdigest()[:12]}_{who}.mp3"
         if not mp3.exists():

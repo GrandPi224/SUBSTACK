@@ -70,12 +70,12 @@ LINES = [
     ("DUHBURRO", "Core? Hooter, with respect. Nobody eats core! Nobody drives core!"),
     ("DUHELEFANTE", "Old Righty has to admit it. For once, my donkey friend is right. Strike that. Pretend I never said it."),
     # 2. Diesel
-    ("HOST", "Hold that thought. The Burro just made our next point for us. Nobody drives core. So what do they drive on? Diesel. That's question two. Bad Ask, you've been itching to jump in. How bad is it?"),
+    ("HOST", "Hold that thought. The Burro just made our next point for us. Nobody drives core. So what do they drive on? Gasoline. And what do the trucks run on? Diesel. That's question two. Gasoline and diesel. Bad Ask, you've been itching to jump in. How bad is it?"),
     ("BADASK", "Itching? I'm furious. Hooter says gasoline did the heavy lifting. Diesel did worse. Diesel tops six dollars a gallon. A year ago, under four. That's up nearly three quarters. Trucks, tractors, freight trains. They all burn it. So who pays? You do. Every time you buy groceries."),
     ("DUHBURRO", "Six dollars! And the Burro blames the elephant's side!"),
     ("DUHELEFANTE", "And Old Righty blames the donkey's side. See, Chip? Bipartisan."),
     # 3. War
-    ("HOST", "Bipartisan blame. But where does diesel come from? Crude oil. And where does crude come from? A part of the world neither party controls. That's question three. The war. Bit Me Da Bear. You've been quiet. That usually means trouble. What do you see?"),
+    ("HOST", "Bipartisan blame. But where do gasoline and diesel come from? Crude oil. And where does crude come from? A part of the world neither party controls. That's question three. The war. Bit Me Da Bear. You've been quiet. That usually means trouble. What do you see?"),
     ("BITME", "Oh, I'm just enjoying the show. Bad Ask asked who pays. Start with who's shooting. Brent crude, about a hundred and fifteen dollars a barrel. A year ago, about sixty. Earlier this month, it touched a hundred and thirty. The war with Iran began in February. But sure. Let's blame each other. That always brings prices down."),
     # 4. Interest rates
     ("HOST", "So let me add it up. Prices up. Diesel up. Oil up. And a war nobody can end by November. So what can Washington do in nine days? Burro? Elephant?"),
